@@ -1,9 +1,7 @@
 <template>
-<v-card class="mx-auto rounded-xl">
+<v-card class="mx-auto rounded-xl text-right">
     <v-card-text>
-        <div>Consistency</div>
-        <p class="display-1 text--primary">be•nev•o•lent</p>
-        <p>adjective</p>
+        <p class="display-1 text--primary">الاستمرارية</p>
         <div class="text--primary">
             <apexchart type="heatmap" :options="chartOptions" :series="series"></apexchart>
         </div>

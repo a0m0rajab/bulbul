@@ -1,12 +1,19 @@
 <template>
-<v-card class="mx-auto rounded-xl">
+<v-card class="mx-auto rounded-xl text-right">
     <v-card-text>
-        <div>Stats</div>
-        <p class="display-1 text--primary">be•nev•o•lent</p>
-        <p>adjective</p>
+        <p class="display-1 text--primary">الإحصائيات</p>
         <div class="text--primary">
-            well meaning and kindly.<br />
-            "a benevolent smile"
+            <v-row>
+                <v-col>
+                    <apexchart type="donut" :options="chartOptions" :series="series"></apexchart>
+                </v-col>
+                <v-col>
+                    <apexchart type="donut" :options="chartOptions" :series="series"></apexchart>
+                </v-col>
+                <v-col>
+                    <apexchart type="donut" :options="chartOptions" :series="series"></apexchart>
+                </v-col>
+            </v-row>
         </div>
     </v-card-text>
     <v-card-actions>
@@ -14,3 +21,26 @@
     </v-card-actions>
 </v-card>
 </template>
+
+<script>
+export default {
+    data: () => {
+        return {
+            series: [44, 55],
+            chartOptions: {
+                legend: {
+                    show: false,
+                },
+                responsive: [{
+                    breakpoint: 480,
+                    options: {
+                        chart: {
+                            width: 200,
+                        },
+                    },
+                }, ],
+            },
+        }
+    },
+}
+</script>

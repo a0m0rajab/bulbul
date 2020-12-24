@@ -98,8 +98,18 @@ export default {
       items: [
         {
           icon: 'mdi-apps',
-          title: 'Welcome',
-          to: '/'
+          title: 'Home Page',
+          to: '/product'
+        },
+        {
+          icon: 'mdi-chart-bubble',
+          title: 'multiple choice',
+          to: '/multiChoice'
+        },
+        {
+          icon: 'mdi-account',
+          title: 'Profile',
+          to: '/profile'
         },
         {
           icon: 'mdi-chart-bubble',
